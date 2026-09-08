@@ -1,3 +1,8 @@
+import priyaAvatar from '../assets/avatars/priya.jpg';
+import vikramAvatar from '../assets/avatars/vikram.jpg';
+import nehaAvatar from '../assets/avatars/neha.jpg';
+import rohanAvatar from '../assets/avatars/rohan.jpg';
+
 export const testimonials = [
   {
     id: 1,
@@ -5,8 +10,7 @@ export const testimonials = [
     name: 'Priya Sharma',
     role: 'Head of Product',
     company: 'ARC Tech',
-    avatarBg: 'bg-gradient-to-tr from-amber-500 to-rose-500',
-    initials: 'PS',
+    avatar: priyaAvatar,
     rating: 5,
   },
   {
@@ -15,8 +19,7 @@ export const testimonials = [
     name: 'Vikram Malhotra',
     role: 'Director of Marketing',
     company: 'VANTA Cloud',
-    avatarBg: 'bg-gradient-to-tr from-blue-500 to-indigo-600',
-    initials: 'VM',
+    avatar: vikramAvatar,
     rating: 5,
   },
   {
@@ -25,8 +28,7 @@ export const testimonials = [
     name: 'Neha Singhal',
     role: 'Chief Operating Officer',
     company: 'NORTHSTAR Logistics',
-    avatarBg: 'bg-gradient-to-tr from-emerald-500 to-teal-600',
-    initials: 'NS',
+    avatar: nehaAvatar,
     rating: 5,
   },
   {
@@ -35,8 +37,7 @@ export const testimonials = [
     name: 'Rohan Verma',
     role: 'VP of Engineering',
     company: 'KINETIC Payments',
-    avatarBg: 'bg-gradient-to-tr from-purple-500 to-pink-500',
-    initials: 'RV',
+    avatar: rohanAvatar,
     rating: 5,
   },
 ];

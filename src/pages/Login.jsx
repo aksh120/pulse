@@ -5,6 +5,7 @@ import BrandLogo from '../components/BrandLogo';
 import Button from '../components/ui/Button';
 import Badge from '../components/ui/Badge';
 import { useTheme } from '../context/ThemeContext';
+import priyaImg from '../assets/avatars/priya.jpg';
 
 export default function Login() {
   const { theme, toggleTheme } = useTheme();
@@ -231,9 +232,11 @@ export default function Login() {
                 "PULSE gives us the visibility we need across projects, people, and priorities. It's become essential to our daily operations."
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-500 to-rose-500 text-white text-xs font-bold flex items-center justify-center">
-                  PS
-                </div>
+                <img
+                  src={priyaImg}
+                  alt="Priya Sharma"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-white dark:border-[#2E2A55] ring-1 ring-pulse-border dark:ring-[#3D3866] shadow-sm flex-shrink-0"
+                />
                 <div>
                   <div className="text-xs font-bold text-pulse-primary dark:text-white">Priya Sharma</div>
                   <div className="text-[11px] text-pulse-secondary">Head of Product, ARC Tech</div>

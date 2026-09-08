@@ -81,9 +81,11 @@ export default function Testimonials() {
                 </div>
 
                 <div className="flex items-center gap-3 pt-4 border-t border-pulse-border/60 dark:border-[#252830]">
-                  <div className={`w-10 h-10 rounded-full ${item.avatarBg} text-white font-bold flex items-center justify-center text-xs flex-shrink-0 shadow-sm`}>
-                    {item.initials}
-                  </div>
+                  <img
+                    src={item.avatar}
+                    alt={item.name}
+                    className="w-11 h-11 rounded-full object-cover border-2 border-white dark:border-[#252830] ring-1 ring-pulse-border dark:ring-[#333742] shadow-sm flex-shrink-0"
+                  />
                   <div>
                     <div className="text-sm font-bold text-pulse-primary dark:text-white">
                       {item.name}

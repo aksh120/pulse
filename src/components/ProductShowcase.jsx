@@ -3,6 +3,7 @@ import { Check, Plus, Search, Bell, FolderKanban, Zap, BarChart2, LayoutGrid, Ar
 import Container from './ui/Container';
 import Badge from './ui/Badge';
 import BrandLogo from './BrandLogo';
+import aaravImg from '../assets/avatars/aarav.jpg';
 
 export default function ProductShowcase() {
   const [activeTab, setActiveTab] = useState('Overview');
@@ -69,9 +70,7 @@ export default function ProductShowcase() {
 
                 <div className="flex items-center gap-2">
                   <Bell className="w-3.5 h-3.5 text-pulse-secondary" />
-                  <div className="w-5 h-5 rounded-full bg-indigo-600 text-white text-[9px] font-bold flex items-center justify-center">
-                    A
-                  </div>
+                  <img src={aaravImg} alt="Aarav" className="w-5 h-5 rounded-full object-cover border border-white/60 dark:border-[#252830]" />
                 </div>
               </div>
 

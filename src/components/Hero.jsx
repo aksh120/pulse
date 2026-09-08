@@ -6,6 +6,11 @@ import Button from './ui/Button';
 import Badge from './ui/Badge';
 import DemoModal from './DemoModal';
 import BrandLogo from './BrandLogo';
+import aaravImg from '../assets/avatars/aarav.jpg';
+import priyaImg from '../assets/avatars/priya.jpg';
+import vikramImg from '../assets/avatars/vikram.jpg';
+import nehaImg from '../assets/avatars/neha.jpg';
+import rohanImg from '../assets/avatars/rohan.jpg';
 
 export default function Hero() {
   const [demoOpen, setDemoOpen] = useState(false);
@@ -159,9 +164,7 @@ export default function Hero() {
                     <Bell className="w-3.5 h-3.5" />
                   </button>
                   <div className="flex items-center gap-1.5 pl-1.5 border-l border-pulse-border dark:border-[#252830]">
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white flex items-center justify-center text-[10px] font-bold">
-                      A
-                    </div>
+                    <img src={aaravImg} alt="Aarav" className="w-6 h-6 rounded-full object-cover border border-white/60 dark:border-[#252830]" />
                     <span className="text-xs font-semibold text-pulse-primary dark:text-white hidden sm:inline">Aarav</span>
                   </div>
                 </div>
@@ -314,10 +317,10 @@ export default function Hero() {
                           <span className="text-[9px] font-semibold text-[#22A06B] bg-[#EBF9F1] dark:bg-[#142B1F] px-1.5 py-0.5 rounded-full">● ALL IN SYNC</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <div className="w-5 h-5 rounded-full bg-blue-500 text-white text-[9px] font-bold flex items-center justify-center">PS</div>
-                          <div className="w-5 h-5 rounded-full bg-emerald-500 text-white text-[9px] font-bold flex items-center justify-center">VM</div>
-                          <div className="w-5 h-5 rounded-full bg-purple-500 text-white text-[9px] font-bold flex items-center justify-center">NS</div>
-                          <div className="w-5 h-5 rounded-full bg-amber-500 text-white text-[9px] font-bold flex items-center justify-center">RV</div>
+                          <img src={priyaImg} alt="Priya Sharma" title="Priya Sharma" className="w-5 h-5 rounded-full object-cover border border-white/60 dark:border-[#252830]" />
+                          <img src={vikramImg} alt="Vikram Malhotra" title="Vikram Malhotra" className="w-5 h-5 rounded-full object-cover border border-white/60 dark:border-[#252830]" />
+                          <img src={nehaImg} alt="Neha Singhania" title="Neha Singhania" className="w-5 h-5 rounded-full object-cover border border-white/60 dark:border-[#252830]" />
+                          <img src={rohanImg} alt="Rohan Verma" title="Rohan Verma" className="w-5 h-5 rounded-full object-cover border border-white/60 dark:border-[#252830]" />
                           <span className="text-[10px] text-pulse-secondary dark:text-pulse-dark-secondary pl-1">+3 active</span>
                         </div>
                       </div>

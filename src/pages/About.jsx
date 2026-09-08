@@ -22,6 +22,13 @@ import Button from '../components/ui/Button';
 import Footer from '../components/Footer';
 import { useTheme } from '../context/ThemeContext';
 
+import aaravImg from '../assets/avatars/aarav.jpg';
+import priyaImg from '../assets/avatars/priya.jpg';
+import rohanImg from '../assets/avatars/rohan.jpg';
+import nehaImg from '../assets/avatars/neha.jpg';
+import vikramImg from '../assets/avatars/vikram.jpg';
+import ananyaImg from '../assets/avatars/ananya.jpg';
+
 export default function About() {
   const { theme, toggleTheme } = useTheme();
 
@@ -31,48 +38,42 @@ export default function About() {
       role: 'Co-Founder & Chief Executive Officer',
       background: 'Ex-Razorpay • IIT Bombay',
       bio: 'Pioneered scalable developer infrastructure and fintech automation pipelines. Passionate about eliminating operational friction for growing engineering squads.',
-      initials: 'AP',
-      color: 'from-blue-600 to-indigo-700',
+      image: aaravImg,
     },
     {
       name: 'Priya Sharma',
       role: 'Co-Founder & Chief Product Officer',
       background: 'Ex-Swiggy • IIM Bangalore',
       bio: 'Product strategist dedicated to building delightful, zero-friction workflows that bridge engineering, design, and executive leadership.',
-      initials: 'PS',
-      color: 'from-purple-600 to-pink-600',
+      image: priyaImg,
     },
     {
       name: 'Rohan Verma',
       role: 'VP of Engineering',
       background: 'Ex-Zerodha • IIT Delhi',
       bio: 'Distributed systems architect leading PULSE’s real-time event ingestion engine, processing millions of continuous webhook signals per minute.',
-      initials: 'RV',
-      color: 'from-emerald-600 to-teal-700',
+      image: rohanImg,
     },
     {
       name: 'Neha Singhal',
       role: 'Head of Customer Operations',
       background: 'Ex-Freshworks • BITS Pilani',
       bio: 'Customer success leader focused on high-touch enterprise onboarding, compliance assurance, and proactive workflow optimization across India and APAC.',
-      initials: 'NS',
-      color: 'from-amber-600 to-orange-600',
+      image: nehaImg,
     },
     {
       name: 'Vikram Malhotra',
       role: 'Head of AI & Machine Intelligence',
       background: 'IISc Bengaluru • AI Research Fellow',
       bio: 'Specialist in contextual graph reasoning and natural language task triage, architecting PULSE’s proprietary daily priority engine.',
-      initials: 'VM',
-      color: 'from-cyan-600 to-blue-700',
+      image: vikramImg,
     },
     {
       name: 'Ananya Tiwari',
       role: 'Head of Product Design',
       background: 'Ex-CRED • NID Ahmedabad',
       bio: 'Design craftsperson obsessed with keyboard ergonomics, typography hierarchy, micro-interactions, and high-performance dark mode interfaces.',
-      initials: 'AT',
-      color: 'from-rose-600 to-red-700',
+      image: ananyaImg,
     },
   ];
 
@@ -267,9 +268,11 @@ export default function About() {
               >
                 <div>
                   <div className="flex items-center gap-4 mb-4">
-                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-tr ${leader.color} flex items-center justify-center text-white font-bold text-lg shadow-sm flex-shrink-0`}>
-                      {leader.initials}
-                    </div>
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      className="w-14 h-14 rounded-2xl object-cover border-2 border-white dark:border-[#252830] ring-1 ring-pulse-border dark:ring-[#333742] shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform duration-200"
+                    />
                     <div>
                       <h3 className="text-base font-bold text-pulse-primary dark:text-white group-hover:text-pulse-accent transition-colors">
                         {leader.name}

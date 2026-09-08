@@ -5,6 +5,7 @@ import BrandLogo from '../components/BrandLogo';
 import Button from '../components/ui/Button';
 import Badge from '../components/ui/Badge';
 import { useTheme } from '../context/ThemeContext';
+import vikramImg from '../assets/avatars/vikram.jpg';
 
 export default function Signup() {
   const { theme, toggleTheme } = useTheme();
@@ -314,9 +315,11 @@ export default function Signup() {
                 "The AI prioritization is a game-changer. It surfaces what actually matters and helps us move faster without the noise."
               </p>
               <div className="flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 text-white text-[10px] font-bold flex items-center justify-center">
-                  VM
-                </div>
+                <img
+                  src={vikramImg}
+                  alt="Vikram Malhotra"
+                  className="w-8 h-8 rounded-full object-cover border-2 border-white dark:border-[#2D2A54] ring-1 ring-pulse-border dark:ring-[#3D3866] shadow-sm flex-shrink-0"
+                />
                 <div className="text-[11px]">
                   <span className="font-bold text-pulse-primary dark:text-white">Vikram Malhotra</span>
                   <span className="text-pulse-secondary"> — Director of Marketing, VANTA Cloud</span>
