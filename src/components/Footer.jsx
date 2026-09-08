@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react';
 import Container from './ui/Container';
 import BrandLogo from './BrandLogo';
@@ -31,37 +32,37 @@ export default function Footer() {
     {
       title: 'Product',
       links: [
-        { name: 'Features', href: '#features' },
-        { name: 'Integrations', href: '#product' },
-        { name: 'Pricing', href: '#pricing' },
-        { name: 'Changelog', href: '#' },
+        { name: 'Features', href: '/#features' },
+        { name: 'Integrations', href: '/#product' },
+        { name: 'Pricing', href: '/#pricing' },
+        { name: 'Sign up', href: '/signup' },
       ],
     },
     {
       title: 'Solutions',
       links: [
-        { name: 'Product', href: '#solutions' },
-        { name: 'Marketing', href: '#solutions' },
-        { name: 'Operations', href: '#solutions' },
-        { name: 'Engineering', href: '#solutions' },
+        { name: 'Product', href: '/#solutions' },
+        { name: 'Marketing', href: '/#solutions' },
+        { name: 'Operations', href: '/#solutions' },
+        { name: 'Engineering', href: '/#solutions' },
       ],
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Blog', href: '#' },
-        { name: 'Guides', href: '#' },
-        { name: 'Help Center', href: '#faq' },
-        { name: 'Community', href: '#' },
+        { name: 'Help Center', href: '/#faq' },
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
       ],
     },
     {
       title: 'Company',
       links: [
-        { name: 'About', href: '#product' },
-        { name: 'Careers', href: '#' },
-        { name: 'Contact', href: '#' },
-        { name: 'Press', href: '#' },
+        { name: 'About', href: '/#product' },
+        { name: 'Customer Stories', href: '/#testimonials' },
+        { name: 'Contact Sales', href: '/signup?plan=scale' },
+        { name: 'Log in', href: '/login' },
       ],
     },
   ];
@@ -74,9 +75,9 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="md:col-span-3 space-y-3">
-            <a href="#" className="inline-block" aria-label="PULSE Home">
+            <Link to="/" className="inline-block" aria-label="PULSE Home">
               <BrandLogo size="md" />
-            </a>
+            </Link>
             <p className="text-xs text-pulse-secondary dark:text-pulse-dark-secondary leading-relaxed">
               Turn busywork into momentum. The intelligent operations workspace for modern teams.
             </p>
@@ -92,12 +93,21 @@ export default function Footer() {
                 <ul className="space-y-2 text-xs">
                   {section.links.map((link) => (
                     <li key={link.name}>
-                      <a
-                        href={link.href}
-                        className="text-pulse-secondary dark:text-pulse-dark-secondary hover:text-pulse-primary dark:hover:text-white transition-colors"
-                      >
-                        {link.name}
-                      </a>
+                      {link.href.startsWith('/') && !link.href.includes('#') ? (
+                        <Link
+                          to={link.href}
+                          className="text-pulse-secondary dark:text-pulse-dark-secondary hover:text-pulse-primary dark:hover:text-white transition-colors"
+                        >
+                          {link.name}
+                        </Link>
+                      ) : (
+                        <a
+                          href={link.href}
+                          className="text-pulse-secondary dark:text-pulse-dark-secondary hover:text-pulse-primary dark:hover:text-white transition-colors"
+                        >
+                          {link.name}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -162,9 +172,9 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-pulse-primary dark:hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-pulse-primary dark:hover:text-white transition-colors">Terms</a>
-            <a href="#" className="hover:text-pulse-primary dark:hover:text-white transition-colors">Cookies</a>
+            <Link to="/privacy" className="hover:text-pulse-primary dark:hover:text-white transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-pulse-primary dark:hover:text-white transition-colors">Terms</Link>
+            <Link to="/cookies" className="hover:text-pulse-primary dark:hover:text-white transition-colors">Cookies</Link>
           </div>
 
           {/* Social Icons */}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Play, Check, Search, Bell, CheckCircle2, AlertCircle, Clock, Users, ChevronRight, LayoutGrid, FolderKanban, ListTodo, Zap, BarChart2, Briefcase, Settings } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Container from './ui/Container';
 import Button from './ui/Button';
 import Badge from './ui/Badge';
@@ -46,7 +47,8 @@ export default function Hero() {
             {/* Action buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto mb-8">
               <Button
-                href="#pricing"
+                as={Link}
+                to="/signup"
                 size="lg"
                 variant="primary"
                 iconRight={<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}

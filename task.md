@@ -148,6 +148,16 @@
 - [x] Document architecture, design decisions, tech choices, AI tools usage, and production roadmap
 - [x] Verify all deliverables match the assignment criteria for 100/100 marks
 
+## Phase 18: Dedicated Pages & Extended Navigation
+- [x] Create Login page (`/login`) with Google/GitHub SSO, validation, and dashboard preview
+- [x] Create Sign Up / Start for Free page (`/signup`) with plan selection, form validation, and social proof
+- [x] Create Privacy Policy page (`/privacy`) with GDPR/CCPA data disclosures and compliance details
+- [x] Create Terms of Service page (`/terms`) with SaaS user agreements, SLA, and IP ownership clauses
+- [x] Create Cookie Policy page (`/cookies`) with interactive cookie preferences manager
+- [x] Connect all navigation links in Navbar, Footer, Hero, Pricing, and CTA to dedicated pages
+- [x] Verify routing, responsive behavior, and dark mode on all new pages
+- [x] Commit and push changes to GitHub (`origin/main`)
+
 ---
 
 ## Final Assignment Compliance Audit

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Container from './ui/Container';
 import Badge from './ui/Badge';
@@ -37,7 +38,8 @@ export default function FinalCTA() {
 
             <div className="flex-shrink-0">
               <Button
-                href="#pricing"
+                as={Link}
+                to="/signup"
                 size="lg"
                 variant="primary"
                 iconRight={<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}

@@ -44,6 +44,13 @@ Built strictly in accordance with the official **Front-End Development Intern As
 - [x] **12. Final CTA Banner**: Visually distinct gradient card ("Your team's next move starts here.") with subtle wave line art and primary action button.
 - [x] **13. Footer**: Multi-column site links, legal links, copyright, social media icons, and working newsletter subscription form with client-side validation.
 
+### Dedicated Application Pages (5 / 5 Completed)
+- [x] **Login Page (`/login`)**: Workspace access portal with Google/GitHub SSO, show/hide password toggle, "Remember me", validation feedback, and enterprise security guarantees.
+- [x] **Start for Free Page (`/signup`)**: Self-serve registration with 14-day Growth trial, plan query parameter support (`?plan=growth`), team size selection, and terms agreement.
+- [x] **Privacy Policy Page (`/privacy`)**: Enterprise-grade privacy disclosure covering data collection, encryption, sub-processors, and statutory GDPR/CCPA rights.
+- [x] **Terms of Service Page (`/terms`)**: Transparent SaaS agreement covering intellectual property ownership, 99.9% uptime SLA, billing, and fair use.
+- [x] **Cookie Policy Page (`/cookies`)**: Interactive cookie preferences manager (toggleable analytics and functional cookies with persistence feedback) and full technical cookie disclosures.
+
 ### Bonus Implementations (8 / 8 Completed)
 - [x] **Dark / Light Mode**: Intentional dark slate palette (`#0B0C0E` background, `#14161A` surface, `#252830` border) with persistent `localStorage` and system preference detection.
 - [x] **Animated Statistics**: Dynamic counter interpolation triggering on viewport entry, respecting `prefers-reduced-motion`.

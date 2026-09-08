@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, Sun, Moon, ArrowRight } from 'lucide-react';
 import BrandLogo from './BrandLogo';
 import Button from './ui/Button';
@@ -9,6 +10,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +42,12 @@ export default function Navbar() {
   const handleNavLinkClick = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
+
+    if (location.pathname !== '/') {
+      navigate('/' + href);
+      return;
+    }
+
     const targetElement = document.querySelector(href);
     if (targetElement) {
       const navbarHeight = 80;
@@ -61,13 +70,13 @@ export default function Navbar() {
       <Container>
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a
-            href="#"
+          <Link
+            to="/"
             className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-pulse-accent rounded-lg"
             aria-label="PULSE Home"
           >
             <BrandLogo size="md" />
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-pulse-secondary dark:text-pulse-dark-secondary" aria-label="Main Navigation">
@@ -76,7 +85,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavLinkClick(e, link.href)}
-                className="hover:text-pulse-primary dark:hover:text-white transition-colors duration-150 py-1"
+                className="hover:text-pulse-primary dark:hover:text-white transition-colors duration-150 py-1 cursor-pointer"
               >
                 {link.name}
               </a>
@@ -100,18 +109,17 @@ export default function Navbar() {
             </button>
 
             {/* Login */}
-            <a
-              href="#pricing"
-              onClick={(e) => handleNavLinkClick(e, '#pricing')}
+            <Link
+              to="/login"
               className="text-sm font-medium text-pulse-secondary hover:text-pulse-primary dark:text-pulse-dark-secondary dark:hover:text-white px-2 py-1 transition-colors"
             >
               Log in
-            </a>
+            </Link>
 
-            {/* Primary CTA */}
+            {/* Primary CTA: Start for free */}
             <Button
-              href="#pricing"
-              onClick={(e) => handleNavLinkClick(e, '#pricing')}
+              as={Link}
+              to="/signup"
               size="sm"
               variant="primary"
               iconRight={<ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />}
@@ -168,16 +176,17 @@ export default function Navbar() {
               ))}
               <hr className="border-pulse-border dark:border-pulse-dark-border my-1" />
               <div className="flex flex-col gap-3 pt-1">
-                <a
-                  href="#pricing"
-                  onClick={(e) => handleNavLinkClick(e, '#pricing')}
+                <Link
+                  to="/login"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="text-center py-2 text-sm font-medium text-pulse-secondary hover:text-pulse-primary dark:text-pulse-dark-secondary dark:hover:text-white"
                 >
                   Log in
-                </a>
+                </Link>
                 <Button
-                  href="#pricing"
-                  onClick={(e) => handleNavLinkClick(e, '#pricing')}
+                  as={Link}
+                  to="/signup"
+                  onClick={() => setMobileMenuOpen(false)}
                   size="md"
                   variant="primary"
                   className="w-full justify-center"

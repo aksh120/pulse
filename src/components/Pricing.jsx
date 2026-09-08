@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import Container from './ui/Container';
 import Badge from './ui/Badge';
@@ -134,7 +135,8 @@ export default function Pricing() {
                 {/* Card Button */}
                 <div>
                   <Button
-                    href="#pricing"
+                    as={Link}
+                    to={`/signup?plan=${plan.id}`}
                     variant={plan.popular ? 'primary' : 'outline'}
                     size="md"
                     className="w-full justify-center text-sm font-semibold"
