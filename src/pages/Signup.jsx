@@ -171,7 +171,7 @@ export default function Signup() {
                     type="text"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    placeholder="Alex Morgan"
+                    placeholder="Aarav Patel"
                     className="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm bg-pulse-surface dark:bg-[#171922] border border-pulse-border dark:border-[#252830] text-pulse-primary dark:text-white placeholder:text-pulse-secondary/60 focus:outline-none focus:ring-2 focus:ring-pulse-accent"
                     required
                   />
@@ -201,7 +201,7 @@ export default function Signup() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="alex@company.com"
+                  placeholder="aarav@company.com"
                   className="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm bg-pulse-surface dark:bg-[#171922] border border-pulse-border dark:border-[#252830] text-pulse-primary dark:text-white placeholder:text-pulse-secondary/60 focus:outline-none focus:ring-2 focus:ring-pulse-accent"
                   required
                 />
@@ -315,11 +315,11 @@ export default function Signup() {
               </p>
               <div className="flex items-center gap-2.5">
                 <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 text-white text-[10px] font-bold flex items-center justify-center">
-                  MR
+                  VM
                 </div>
                 <div className="text-[11px]">
-                  <span className="font-bold text-pulse-primary dark:text-white">Marcus Rivera</span>
-                  <span className="text-pulse-secondary"> — Marketing Lead, VANTA</span>
+                  <span className="font-bold text-pulse-primary dark:text-white">Vikram Malhotra</span>
+                  <span className="text-pulse-secondary"> — Director of Marketing, VANTA Cloud</span>
                 </div>
               </div>
             </div>

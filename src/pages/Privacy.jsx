@@ -151,17 +151,17 @@ export default function Privacy() {
                     <tr>
                       <td className="p-2.5 border border-pulse-border dark:border-[#252830] font-semibold">Amazon Web Services (AWS)</td>
                       <td className="p-2.5 border border-pulse-border dark:border-[#252830]">Cloud infrastructure & secure hosting</td>
-                      <td className="p-2.5 border border-pulse-border dark:border-[#252830]">United States (us-east-1) / EU</td>
+                      <td className="p-2.5 border border-pulse-border dark:border-[#252830]">AWS Asia Pacific (Mumbai) ap-south-1 / Bengaluru</td>
                     </tr>
                     <tr>
-                      <td className="p-2.5 border border-pulse-border dark:border-[#252830] font-semibold">Stripe Inc.</td>
-                      <td className="p-2.5 border border-pulse-border dark:border-[#252830]">Payment processing & invoicing</td>
-                      <td className="p-2.5 border border-pulse-border dark:border-[#252830]">United States</td>
+                      <td className="p-2.5 border border-pulse-border dark:border-[#252830] font-semibold">Stripe / Razorpay</td>
+                      <td className="p-2.5 border border-pulse-border dark:border-[#252830]">Payment processing, UPI & invoicing</td>
+                      <td className="p-2.5 border border-pulse-border dark:border-[#252830]">India / Global</td>
                     </tr>
                     <tr>
                       <td className="p-2.5 border border-pulse-border dark:border-[#252830] font-semibold">PostHog</td>
                       <td className="p-2.5 border border-pulse-border dark:border-[#252830]">Product analytics & performance metrics</td>
-                      <td className="p-2.5 border border-pulse-border dark:border-[#252830]">United States / EU</td>
+                      <td className="p-2.5 border border-pulse-border dark:border-[#252830]">Cloud Infrastructure</td>
                     </tr>
                   </tbody>
                 </table>
@@ -170,10 +170,10 @@ export default function Privacy() {
 
             <section className="space-y-3">
               <h2 className="text-lg font-bold text-pulse-primary dark:text-white">
-                5. Your Rights (GDPR & CCPA)
+                5. Your Rights (GDPR & Digital Personal Data Protection)
               </h2>
               <p>
-                Depending on your location, you have statutory rights regarding your personal information, including:
+                Depending on your jurisdiction, you have statutory rights regarding your personal information, including rights under India's Digital Personal Data Protection Act (DPDP) and GDPR:
               </p>
               <ul className="list-disc pl-5 space-y-1">
                 <li><strong>Right of Access:</strong> Request a complete copy of all personal data held about you.</li>
@@ -197,9 +197,9 @@ export default function Privacy() {
                 If you have questions or concerns about this policy or our data practices, please contact our Data Protection Officer at:
               </p>
               <div className="p-4 rounded-xl bg-pulse-surface dark:bg-[#171922] border border-pulse-border dark:border-[#252830] text-xs">
-                <strong>PULSE Inc. Data Protection Office</strong><br />
-                548 Market Street, Suite 89201<br />
-                San Francisco, CA 94104, USA<br />
+                <strong>PULSE Technologies India Pvt. Ltd. — Data Protection Office</strong><br />
+                Level 4, Prestige Tech Park, Sarjapur-Marathahalli Ring Road<br />
+                Bengaluru, Karnataka 560103, India<br />
                 Email:{' '}
                 <a href="mailto:privacy@pulse.io" className="text-pulse-accent hover:underline">
                   privacy@pulse.io

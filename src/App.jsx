@@ -7,6 +7,8 @@ import Signup from './pages/Signup';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Cookies from './pages/Cookies';
+import About from './pages/About';
+import Help from './pages/Help';
 
 // Helper to auto-scroll to top on route change or handle hash scrolling
 function ScrollManager() {
@@ -14,7 +16,10 @@ function ScrollManager() {
 
   useEffect(() => {
     if (location.hash) {
-      const targetElement = document.querySelector(location.hash);
+      let targetElement = document.querySelector(location.hash);
+      if (!targetElement && location.hash.startsWith('#solutions')) {
+        targetElement = document.querySelector('#solutions');
+      }
       if (targetElement) {
         setTimeout(() => {
           const navbarHeight = 80;
@@ -23,7 +28,7 @@ function ScrollManager() {
             top: targetPosition,
             behavior: 'smooth'
           });
-        }, 50);
+        }, 100);
         return;
       }
     }
@@ -41,6 +46,8 @@ export default function App() {
         <div className="min-h-screen bg-pulse-bg text-pulse-primary dark:bg-pulse-dark-bg dark:text-pulse-dark-primary selection:bg-pulse-accent selection:text-white transition-colors duration-200">
           <Routes>
             <Route path="/" element={<Landing />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/help" element={<Help />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/privacy" element={<Privacy />} />

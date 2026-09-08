@@ -120,7 +120,7 @@ export default function Hero() {
                     <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 text-white flex items-center justify-center text-[10px] font-bold">
                       A
                     </div>
-                    <span className="text-xs font-semibold text-pulse-primary dark:text-white hidden sm:inline">Alex</span>
+                    <span className="text-xs font-semibold text-pulse-primary dark:text-white hidden sm:inline">Aarav</span>
                   </div>
                 </div>
               </div>
@@ -169,7 +169,7 @@ export default function Hero() {
                   {/* Greeting */}
                   <div className="mb-4">
                     <h2 className="text-base sm:text-lg font-bold text-pulse-primary dark:text-white leading-tight">
-                      Good morning, Alex
+                      Good morning, Aarav
                     </h2>
                     <p className="text-[11px] sm:text-xs text-pulse-secondary dark:text-pulse-dark-secondary">
                       Here's what needs your attention today.
@@ -272,10 +272,10 @@ export default function Hero() {
                           <span className="text-[9px] font-semibold text-[#22A06B] bg-[#EBF9F1] dark:bg-[#142B1F] px-1.5 py-0.5 rounded-full">● ALL IN SYNC</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <div className="w-5 h-5 rounded-full bg-blue-500 text-white text-[9px] font-bold flex items-center justify-center">SC</div>
-                          <div className="w-5 h-5 rounded-full bg-emerald-500 text-white text-[9px] font-bold flex items-center justify-center">MR</div>
-                          <div className="w-5 h-5 rounded-full bg-purple-500 text-white text-[9px] font-bold flex items-center justify-center">EP</div>
-                          <div className="w-5 h-5 rounded-full bg-amber-500 text-white text-[9px] font-bold flex items-center justify-center">DK</div>
+                          <div className="w-5 h-5 rounded-full bg-blue-500 text-white text-[9px] font-bold flex items-center justify-center">PS</div>
+                          <div className="w-5 h-5 rounded-full bg-emerald-500 text-white text-[9px] font-bold flex items-center justify-center">VM</div>
+                          <div className="w-5 h-5 rounded-full bg-purple-500 text-white text-[9px] font-bold flex items-center justify-center">NS</div>
+                          <div className="w-5 h-5 rounded-full bg-amber-500 text-white text-[9px] font-bold flex items-center justify-center">RV</div>
                           <span className="text-[10px] text-pulse-secondary dark:text-pulse-dark-secondary pl-1">+3 active</span>
                         </div>
                       </div>

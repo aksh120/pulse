@@ -159,9 +159,9 @@ export default function Terms() {
                 Questions regarding these Terms of Service should be directed to:
               </p>
               <div className="p-4 rounded-xl bg-pulse-surface dark:bg-[#171922] border border-pulse-border dark:border-[#252830] text-xs">
-                <strong>PULSE Inc. Legal Counsel</strong><br />
-                548 Market Street, Suite 89201<br />
-                San Francisco, CA 94104, USA<br />
+                <strong>PULSE Technologies India Pvt. Ltd. — Legal Department</strong><br />
+                Level 4, Prestige Tech Park, Sarjapur-Marathahalli Ring Road<br />
+                Bengaluru, Karnataka 560103, India<br />
                 Email:{' '}
                 <a href="mailto:legal@pulse.io" className="text-pulse-accent hover:underline">
                   legal@pulse.io

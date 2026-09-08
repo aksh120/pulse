@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Check, ArrowRight, Layers, Sparkles, Zap, Code2, Users, Rocket, ShieldCheck } from 'lucide-react';
 import Container from './ui/Container';
 import Badge from './ui/Badge';
@@ -6,6 +7,26 @@ import { solutionsData } from '../data/solutions';
 
 export default function Solutions() {
   const [selectedRole, setSelectedRole] = useState('Product');
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleHashOrLocation = () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash.includes('solutions-engineering')) {
+        setSelectedRole('Engineering');
+      } else if (hash.includes('solutions-marketing')) {
+        setSelectedRole('Marketing');
+      } else if (hash.includes('solutions-operations')) {
+        setSelectedRole('Operations');
+      } else if (hash.includes('solutions-product')) {
+        setSelectedRole('Product');
+      }
+    };
+
+    handleHashOrLocation();
+    window.addEventListener('hashchange', handleHashOrLocation);
+    return () => window.removeEventListener('hashchange', handleHashOrLocation);
+  }, [location]);
 
   const roles = ['Product', 'Marketing', 'Operations', 'Engineering'];
   const currentData = solutionsData[selectedRole];

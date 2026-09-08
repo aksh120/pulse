@@ -232,11 +232,11 @@ export default function Login() {
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-500 to-rose-500 text-white text-xs font-bold flex items-center justify-center">
-                  SC
+                  PS
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-pulse-primary dark:text-white">Sarah Chen</div>
-                  <div className="text-[11px] text-pulse-secondary">Head of Product, ARC</div>
+                  <div className="text-xs font-bold text-pulse-primary dark:text-white">Priya Sharma</div>
+                  <div className="text-[11px] text-pulse-secondary">Head of Product, ARC Tech</div>
                 </div>
               </div>
             </div>

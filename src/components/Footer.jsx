@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react';
 import Container from './ui/Container';
 import BrandLogo from './BrandLogo';
 
 export default function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // 'idle' | 'success' | 'error'
   const [errorMessage, setErrorMessage] = useState('');
@@ -41,16 +43,16 @@ export default function Footer() {
     {
       title: 'Solutions',
       links: [
-        { name: 'Product', href: '/#solutions' },
-        { name: 'Marketing', href: '/#solutions' },
-        { name: 'Operations', href: '/#solutions' },
-        { name: 'Engineering', href: '/#solutions' },
+        { name: 'Product', href: '/#solutions-product' },
+        { name: 'Marketing', href: '/#solutions-marketing' },
+        { name: 'Operations', href: '/#solutions-operations' },
+        { name: 'Engineering', href: '/#solutions-engineering' },
       ],
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Help Center', href: '/#faq' },
+        { name: 'Help Center', href: '/help' },
         { name: 'Privacy Policy', href: '/privacy' },
         { name: 'Terms of Service', href: '/terms' },
         { name: 'Cookie Policy', href: '/cookies' },
@@ -59,13 +61,34 @@ export default function Footer() {
     {
       title: 'Company',
       links: [
-        { name: 'About', href: '/#product' },
+        { name: 'About Us', href: '/about' },
         { name: 'Customer Stories', href: '/#testimonials' },
         { name: 'Contact Sales', href: '/signup?plan=scale' },
         { name: 'Log in', href: '/login' },
       ],
     },
   ];
+
+  const handleLinkClick = (e, href) => {
+    if (href.includes('#')) {
+      e.preventDefault();
+      const hash = href.split('#')[1];
+      if (location.pathname !== '/') {
+        navigate('/#' + hash);
+        return;
+      }
+      window.location.hash = hash;
+      const targetId = hash.startsWith('solutions') ? 'solutions' : hash;
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth',
+        });
+      }
+    }
+  };
 
   return (
     <footer className="pt-16 pb-12 border-t border-pulse-border dark:border-[#252830] bg-white dark:bg-[#0B0C0E]">
@@ -103,7 +126,8 @@ export default function Footer() {
                       ) : (
                         <a
                           href={link.href}
-                          className="text-pulse-secondary dark:text-pulse-dark-secondary hover:text-pulse-primary dark:hover:text-white transition-colors"
+                          onClick={(e) => handleLinkClick(e, link.href)}
+                          className="text-pulse-secondary dark:text-pulse-dark-secondary hover:text-pulse-primary dark:hover:text-white transition-colors cursor-pointer"
                         >
                           {link.name}
                         </a>
