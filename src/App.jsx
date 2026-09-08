@@ -9,6 +9,7 @@ import Terms from './pages/Terms';
 import Cookies from './pages/Cookies';
 import About from './pages/About';
 import Help from './pages/Help';
+import ScrollProgress from './components/ScrollProgress';
 
 // Helper to auto-scroll to top on route change or handle hash scrolling
 function ScrollManager() {
@@ -42,6 +43,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
+        <ScrollProgress />
         <ScrollManager />
         <div className="min-h-screen bg-pulse-bg text-pulse-primary dark:bg-pulse-dark-bg dark:text-pulse-dark-primary selection:bg-pulse-accent selection:text-white transition-colors duration-200">
           <Routes>

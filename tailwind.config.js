@@ -50,6 +50,14 @@ export default {
         'fade-in': 'fadeIn 0.3s ease-out forwards',
         'slide-up': 'slideUp 0.4s ease-out forwards',
         'pulse-subtle': 'pulseSubtle 2.5s infinite ease-in-out',
+        'marquee': 'marquee 30s linear infinite',
+        'marquee-reverse': 'marqueeReverse 30s linear infinite',
+        'shimmer': 'shimmer 2.5s infinite ease-in-out',
+        'float': 'float 4s ease-in-out infinite',
+        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+        'radar': 'radar 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+        'aurora-1': 'auroraOne 18s ease-in-out infinite alternate',
+        'aurora-2': 'auroraTwo 14s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeIn: {
@@ -63,7 +71,41 @@ export default {
         pulseSubtle: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.6' },
-        }
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        marqueeReverse: {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(200%)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+          '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+        },
+        radar: {
+          '0%': { transform: 'scale(0.8)', opacity: '0.9' },
+          '100%': { transform: 'scale(2.4)', opacity: '0' },
+        },
+        auroraOne: {
+          '0%': { transform: 'translate(0, 0) rotate(0deg) scale(1)' },
+          '50%': { transform: 'translate(40px, -30px) rotate(18deg) scale(1.15)' },
+          '100%': { transform: 'translate(-20px, 25px) rotate(-12deg) scale(0.95)' },
+        },
+        auroraTwo: {
+          '0%': { transform: 'translate(0, 0) rotate(0deg) scale(1)' },
+          '50%': { transform: 'translate(-50px, 20px) rotate(-20deg) scale(1.2)' },
+          '100%': { transform: 'translate(30px, -40px) rotate(15deg) scale(0.9)' },
+        },
       }
     },
   },

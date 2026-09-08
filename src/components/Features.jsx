@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Container from './ui/Container';
 import Badge from './ui/Badge';
+import SpotlightCard from './ui/SpotlightCard';
 import { features } from '../data/features';
 
 function FeatureIcon({ type, className = '' }) {
@@ -33,7 +34,7 @@ function FeatureIcon({ type, className = '' }) {
           <rect x="4.5" y="4.5" width="2" height="6" rx="1" transform="rotate(-45 4.5 4.5)" />
           <rect x="17.5" y="17.5" width="2" height="6" rx="1" transform="rotate(-45 17.5 17.5)" />
           <rect x="17.5" y="4.5" width="2" height="6" rx="1" transform="rotate(45 17.5 4.5)" />
-          <rect x="4.5" y="17.5" width="2" height="6" rx="1" transform="rotate(45 4.5 17.5)" />
+          <rect x="4.5" y="17.5" width="2" height="6" rx="1" transform="rotate(45 17.5 4.5)" />
         </svg>
       );
     case 'zap':
@@ -64,7 +65,7 @@ function FeatureIcon({ type, className = '' }) {
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 sm:py-28">
+    <section id="features" className="py-20 sm:py-28 relative">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Heading & Description */}
@@ -79,7 +80,7 @@ export default function Features() {
             </h2>
 
             <p className="text-sm sm:text-base text-pulse-secondary dark:text-pulse-dark-secondary mb-6 leading-relaxed">
-              Powerful features to help your team focus, execute, and achieve more without the administrative overhead.
+              Powerful features to help your team focus, execute, and achieve more without administrative overhead.
             </p>
 
             <a
@@ -95,27 +96,29 @@ export default function Features() {
           <div className="lg:col-span-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {features.map((feature) => (
-                <div
+                <SpotlightCard
                   key={feature.id}
-                  className="group flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#13151C] border border-pulse-border/80 dark:border-[#232630] hover:border-pulse-accent/30 dark:hover:border-pulse-accent/30 hover:shadow-card-hover transition-all duration-200"
+                  className="p-5 sm:p-6"
                 >
-                  {/* Icon Box */}
-                  <div
-                    className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${feature.iconBg} ${feature.iconColor} transition-transform group-hover:scale-105 duration-200`}
-                  >
-                    <FeatureIcon type={feature.iconType} className="w-5 h-5" />
-                  </div>
+                  <div className="flex items-start gap-4">
+                    {/* Icon Box */}
+                    <div
+                      className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${feature.iconBg} ${feature.iconColor} transition-transform group-hover:scale-110 duration-200 shadow-sm`}
+                    >
+                      <FeatureIcon type={feature.iconType} className="w-5 h-5" />
+                    </div>
 
-                  {/* Text Content */}
-                  <div>
-                    <h3 className="text-base font-bold text-pulse-primary dark:text-white mb-1.5 leading-snug">
-                      {feature.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-pulse-secondary dark:text-pulse-dark-secondary leading-relaxed">
-                      {feature.description}
-                    </p>
+                    {/* Text Content */}
+                    <div>
+                      <h3 className="text-base font-bold text-pulse-primary dark:text-white mb-1.5 leading-snug group-hover:text-pulse-accent transition-colors">
+                        {feature.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-pulse-secondary dark:text-pulse-dark-secondary leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </SpotlightCard>
               ))}
             </div>
           </div>

@@ -10,6 +10,23 @@ import BrandLogo from './BrandLogo';
 export default function Hero() {
   const [demoOpen, setDemoOpen] = useState(false);
   const [activeNav, setActiveNav] = useState('Overview');
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e) => {
+    const card = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - card.left - card.width / 2;
+    const y = e.clientY - card.top - card.height / 2;
+    const rotateX = -(y / (card.height / 2)) * 5;
+    const rotateY = (x / (card.width / 2)) * 5;
+    setTilt({ x: rotateX, y: rotateY });
+  };
+
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setTilt({ x: 0, y: 0 });
+  };
 
   const navItems = [
     { name: 'Overview', icon: LayoutGrid },
@@ -21,13 +38,29 @@ export default function Hero() {
 
   return (
     <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 overflow-hidden">
-      {/* Subtle background glow effect (refined, non-obtrusive) */}
+      {/* Dynamic Animated Ambient Aurora Mesh Blobs */}
       <div 
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[350px] bg-gradient-to-tr from-purple-100/50 via-indigo-50/30 to-transparent dark:from-[#1D1B36]/20 dark:via-transparent dark:to-transparent rounded-full blur-3xl -z-10 pointer-events-none" 
+        className="absolute top-1/4 left-1/3 w-[550px] sm:w-[750px] h-[400px] bg-gradient-to-tr from-purple-500/15 via-indigo-400/10 to-transparent dark:from-purple-900/25 dark:via-indigo-900/15 dark:to-transparent rounded-full blur-3xl -z-10 pointer-events-none animate-aurora-1" 
+        aria-hidden="true" 
+      />
+      <div 
+        className="absolute top-1/3 right-1/4 w-[450px] sm:w-[650px] h-[350px] bg-gradient-to-bl from-pulse-accent/15 via-pink-400/10 to-transparent dark:from-pulse-accent/25 dark:via-pink-900/15 dark:to-transparent rounded-full blur-3xl -z-10 pointer-events-none animate-aurora-2" 
         aria-hidden="true" 
       />
 
       <Container>
+        {/* Live Momentum Ticker Bar */}
+        <div className="flex justify-center sm:justify-start mb-6">
+          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-[#151720]/80 border border-pulse-border dark:border-[#252830] backdrop-blur-md text-xs font-medium text-pulse-secondary dark:text-pulse-dark-secondary shadow-subtle hover:border-pulse-accent/40 transition-colors">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span className="text-pulse-primary dark:text-white font-semibold">Live Momentum:</span>
+            <span>1,420 automations dispatched this minute across India & worldwide</span>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Value proposition & CTAs */}
           <div className="lg:col-span-5 flex flex-col items-start text-left z-10">
@@ -89,8 +122,17 @@ export default function Hero() {
           </div>
 
           {/* Right Column: High-Fidelity Product UI Mockup */}
-          <div className="lg:col-span-7 w-full">
-            <div className="relative mx-auto bg-white dark:bg-[#13151B] rounded-2xl border border-pulse-border dark:border-[#252830] shadow-dashboard dark:shadow-dashboard-dark transition-all duration-300 overflow-hidden">
+          <div className="lg:col-span-7 w-full perspective-1000">
+            <div 
+              onMouseMove={handleMouseMove}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale3d(${isHovered ? 1.015 : 1}, ${isHovered ? 1.015 : 1}, 1)`,
+                transition: isHovered ? 'transform 0.1s ease-out' : 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)',
+              }}
+              className="relative mx-auto bg-white dark:bg-[#13151B] rounded-2xl border border-pulse-border dark:border-[#252830] shadow-dashboard dark:shadow-dashboard-dark overflow-hidden transform-gpu"
+            >
               
               {/* App Top Bar */}
               <div className="flex items-center justify-between px-4 py-2.5 border-b border-pulse-border dark:border-[#252830] bg-[#FAFAF9] dark:bg-[#161820]">

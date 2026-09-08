@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import LogoCloud from '../components/LogoCloud';
 import Features from '../components/Features';
 import ProductShowcase from '../components/ProductShowcase';
+import InteractivePlayground from '../components/InteractivePlayground';
 import HowItWorks from '../components/HowItWorks';
 import Stats from '../components/Stats';
 import Solutions from '../components/Solutions';
@@ -23,6 +24,7 @@ export default function Landing() {
         <LogoCloud />
         <Features />
         <ProductShowcase />
+        <InteractivePlayground />
         <HowItWorks />
         <Stats />
         <Solutions />

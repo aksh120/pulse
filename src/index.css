@@ -63,6 +63,38 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .dark .glass-panel {
+    background: rgba(18, 20, 26, 0.78);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .perspective-1000 {
+    perspective: 1200px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .pause-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 45px -10px rgba(99, 91, 255, 0.35);
+  }
+
+  .dark .glow-accent {
+    box-shadow: 0 0 55px -8px rgba(122, 115, 255, 0.28);
+  }
 }
 
 /* Reduced motion preference support */
