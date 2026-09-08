@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Modal from './ui/Modal';
 import Button from './ui/Button';
 import Badge from './ui/Badge';
 import { Play, CheckCircle2, ArrowRight, ArrowLeft, Sparkles, Layers, Zap, BarChart3 } from 'lucide-react';
 
 export default function DemoModal({ isOpen, onClose }) {
+  const navigate = useNavigate();
   const [activeStep, setActiveStep] = useState(0);
 
   const demoSteps = [
@@ -175,7 +177,10 @@ export default function DemoModal({ isOpen, onClose }) {
             <Button
               variant="accent"
               size="sm"
-              onClick={onClose}
+              onClick={() => {
+                onClose();
+                navigate('/signup');
+              }}
               iconRight={<CheckCircle2 className="w-4 h-4" />}
             >
               Get Started Free

@@ -52,6 +52,20 @@ export default function Button({
     );
   }
 
+  if (Component && Component !== 'button') {
+    return (
+      <Component
+        className={combinedClasses}
+        onClick={onClick}
+        {...props}
+      >
+        {iconLeft && <span className="flex-shrink-0">{iconLeft}</span>}
+        <span>{children}</span>
+        {iconRight && <span className="flex-shrink-0">{iconRight}</span>}
+      </Component>
+    );
+  }
+
   return (
     <button
       type={type}
