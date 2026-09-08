@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Assignments and internal task docs
+task.md
+*.pdf
