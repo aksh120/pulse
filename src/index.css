@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --pulse-bg: #FFFFFF;
+    --pulse-surface: #F7F7F5;
+    --pulse-primary: #111111;
+    --pulse-secondary: #686868;
+    --pulse-border: #E7E7E4;
+    --pulse-accent: #635BFF;
+  }
+
+  .dark {
+    --pulse-bg: #0B0C0E;
+    --pulse-surface: #14161A;
+    --pulse-primary: #F3F4F6;
+    --pulse-secondary: #9CA3AF;
+    --pulse-border: #252830;
+    --pulse-accent: #7A73FF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--pulse-bg);
+    color: var(--pulse-primary);
+    overflow-x: hidden;
+  }
+
+  /* Accessible focus ring */
+  *:focus-visible {
+    outline: 2px solid #635BFF;
+    outline-offset: 2px;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D1D1CE;
+    border-radius: 4px;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: #2D3139;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Reduced motion preference support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
