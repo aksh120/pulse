@@ -164,8 +164,8 @@ export default function Pricing() {
                 {/* Popular Pill */}
                 {plan.popular && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                    <Badge variant="purple" size="sm" className="font-bold uppercase tracking-wider text-[10px] shadow-sm bg-pulse-accent text-white dark:bg-pulse-accent dark:text-white">
-                      ★ Most Popular
+                    <Badge variant="purple" size="sm" className="font-bold uppercase tracking-widest text-[10px] shadow-sm bg-pulse-accent text-white dark:bg-pulse-accent dark:text-white px-3 py-0.5">
+                      Most Popular
                     </Badge>
                   </div>
                 )}

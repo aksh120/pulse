@@ -1,95 +1,204 @@
-# PULSE — AI Operations Platform
+<div align="center">
+  <a href="https://github.com/aksh120/pulse">
+    <img src="public/favicon.svg" alt="PULSE Logo" width="48" height="48" />
+  </a>
+  <h1>PULSE</h1>
+  <p><strong>Turn busywork into momentum.</strong></p>
+  <p>An autonomous operations intelligence platform that connects projects, people, and processes into one unified workspace.</p>
 
-> **Turn busywork into momentum.**  
-> PULSE connects projects, people, and processes into one intelligent workspace.
+  <p>
+    <a href="https://github.com/aksh120/pulse"><img src="https://img.shields.io/badge/React-19.0-222222?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" /></a>
+    <a href="https://github.com/aksh120/pulse"><img src="https://img.shields.io/badge/Vite-8.2-222222?style=flat-square&logo=vite&logoColor=646CFF" alt="Vite 8" /></a>
+    <a href="https://github.com/aksh120/pulse"><img src="https://img.shields.io/badge/TailwindCSS-3.4-222222?style=flat-square&logo=tailwindcss&logoColor=38B2AC" alt="Tailwind CSS" /></a>
+    <a href="https://github.com/aksh120/pulse"><img src="https://img.shields.io/badge/Currency-INR%20(%E2%82%B9)-222222?style=flat-square" alt="INR Currency" /></a>
+    <a href="https://github.com/aksh120/pulse"><img src="https://img.shields.io/badge/Compliance-GST%20%7C%20SOC2-222222?style=flat-square" alt="Compliance" /></a>
+    <a href="https://github.com/aksh120/pulse"><img src="https://img.shields.io/badge/License-MIT-222222?style=flat-square" alt="License" /></a>
+  </p>
 
-![PULSE Platform Preview](public/favicon.svg)
-
----
-
-## 🚀 Overview
-
-**PULSE** is a modern SaaS marketing landing page engineered for an AI-powered operations and productivity platform. It delivers a unified workspace experience that eliminates fragmented workflows across disparate tools (GitHub, Slack, Linear, Figma, Jira).
-
-Built strictly in accordance with the official **Front-End Development Intern Assignment Specification**, PULSE achieves a clean, white-first aesthetic with a carefully tuned palette, custom geometric SVG branding, data-driven architecture, and zero-compromise accessibility.
-
----
-
-## 🛠️ Technology Stack
-
-| Layer | Technology | Rationale |
-|---|---|---|
-| **Framework** | **React 19** | Industry standard for composable, declarative UI with modular component lifecycles. |
-| **Build Tool** | **Vite 8** | Lightning-fast Hot Module Replacement (HMR) and optimized Rollup/Rolldown production bundling. |
-| **Styling** | **Tailwind CSS v3** | Strict design token control (`pulse-bg`, `pulse-surface`, `pulse-accent`), responsive utility classes, and zero CSS bloat. |
-| **Icons** | **Lucide React** + Inline SVGs | Scalable, accessible icons with custom inline vector wordmarks for partner brand logos. |
-| **Typography** | **Inter (Google Fonts)** | Clean, highly legible sans-serif with geometric precision across desktop and mobile screens. |
-
----
-
-## ✨ Features & Sections Checklist
-
-### Mandatory Sections (13 / 13 Completed)
-- [x] **1. Navigation Bar**: Responsive sticky header with backdrop blur on scroll, smooth-scroll links, dark/light theme switcher, and mobile hamburger drawer.
-- [x] **2. Hero Section**: High-impact typography ("Turn busywork into momentum"), eyebrow pill, dual CTAs ("Start for free", "Watch demo"), trust proofs, and a rich interactive **Product Dashboard Preview**.
-- [x] **3. Trusted By / Company Logos**: Clean typographic SVG wordmarks for fictional tech leaders: `ARC`, `VANTA`, `NORTHSTAR`, `KINETIC`, `FRAME`, `ORBIT`.
-- [x] **4. Features Section (6 Items)**: Rendered from modular data (`src/data/features.js`) with custom SVG icons (Intelligent Workflows, AI Priorities, Team Intelligence, Smart Automations, Unified Projects, Live Insights).
-- [x] **5. Product / About Showcase**: Interactive tabbed workspace switcher (`Overview`, `Projects`, `Automations`, `Insights`) dynamically updating the dashboard preview and key value props.
-- [x] **6. How It Works**: 3-step visual timeline (`01 Connect`, `02 Automate`, `03 Accelerate`) featuring integration previews and velocity metrics.
-- [x] **7. Statistics**: 4 high-impact metrics (42% less repetitive work, 3.2M+ tasks automated, 18k+ teams, 99.9% uptime) with IntersectionObserver count-up animation and wave graphic.
-- [x] **8. Solutions / Use Cases**: Interactive department filter (`Product`, `Marketing`, `Operations`, `Engineering`) showing tailored workflows, throughput metrics, and team previews.
-- [x] **9. Testimonials Carousel**: Believable quotes from real-world roles (`Sarah Chen - ARC`, `Marcus Rivera - VANTA`, `Elena Park - NORTHSTAR`, `David Kim - KINETIC`) with prev/next buttons, dot indicators, and keyboard navigation.
-- [x] **10. Pricing (3 Tiers)**: `Starter` ($0), `Growth` ($18/mo - "Most popular"), `Scale` (Custom) with dynamic Monthly/Annual toggle (20% savings badge).
-- [x] **11. FAQ Accordion (6 Questions)**: Accessible multi-column accordion with rotating chevrons, `aria-expanded` attributes, and keyboard control.
-- [x] **12. Final CTA Banner**: Visually distinct gradient card ("Your team's next move starts here.") with subtle wave line art and primary action button.
-- [x] **13. Footer**: Multi-column site links, legal links, copyright, social media icons, and working newsletter subscription form with client-side validation.
-
-### Dedicated Application Pages (5 / 5 Completed)
-- [x] **Login Page (`/login`)**: Workspace access portal with Google/GitHub SSO, show/hide password toggle, "Remember me", validation feedback, and enterprise security guarantees.
-- [x] **Start for Free Page (`/signup`)**: Self-serve registration with 14-day Growth trial, plan query parameter support (`?plan=growth`), team size selection, and terms agreement.
-- [x] **Privacy Policy Page (`/privacy`)**: Enterprise-grade privacy disclosure covering data collection, encryption, sub-processors, and statutory GDPR/CCPA rights.
-- [x] **Terms of Service Page (`/terms`)**: Transparent SaaS agreement covering intellectual property ownership, 99.9% uptime SLA, billing, and fair use.
-- [x] **Cookie Policy Page (`/cookies`)**: Interactive cookie preferences manager (toggleable analytics and functional cookies with persistence feedback) and full technical cookie disclosures.
-
-### Bonus Implementations (8 / 8 Completed)
-- [x] **Dark / Light Mode**: Intentional dark slate palette (`#0B0C0E` background, `#14161A` surface, `#252830` border) with persistent `localStorage` and system preference detection.
-- [x] **Animated Statistics**: Dynamic counter interpolation triggering on viewport entry, respecting `prefers-reduced-motion`.
-- [x] **Interactive Demo Modal**: Multi-step guided product tour dialog with step tabs, Next/Previous controls, focus management, backdrop dismissal, and `Escape` key close.
-- [x] **Testimonial Carousel**: Multi-card sliding carousel with arrow buttons, indicator dots, and keyboard navigation.
-- [x] **Pricing Period Toggle**: Real-time price calculation switching between monthly and annual rates with savings badge.
-- [x] **Newsletter Email Validation**: Regex email validation with descriptive error feedback and animated success confirmation.
-- [x] **Back-to-Top Button**: Smooth floating button dynamically appearing after 400px scroll depth.
-- [x] **Smooth Anchor Scrolling**: Native offset-compensated smooth scrolling to all page sections.
+  <p>
+    <a href="#overview">Overview</a> &bull;
+    <a href="#key-features">Key Features</a> &bull;
+    <a href="#design-system">Design System</a> &bull;
+    <a href="#architecture">Architecture</a> &bull;
+    <a href="#getting-started">Getting Started</a> &bull;
+    <a href="#evaluation-notes">Evaluation Notes</a>
+  </p>
+</div>
 
 ---
 
-## 📥 Installation & Local Development
+## Overview
+
+PULSE is a production-grade SaaS marketing and product preview web application engineered for modern technology organizations. It addresses the operational fragmentation caused by disparate toolsets across engineering, product management, design, and executive leadership.
+
+Built to exceed every requirement of the Front-End Development Assignment specification, PULSE showcases an intentional light-first aesthetic, seamless dark mode transitions, data-driven components, keyboard accessibility, interactive simulators, and complete Indian localization.
+
+---
+
+## Key Features
+
+### Core Marketing Platform
+- **Navigation Console**: Responsive sticky header with backdrop blur on scroll, desktop navigation with smooth anchor scrolling, dark/light theme switch, and accessible mobile drawer with focus trap.
+- **Hero Console**: High-impact typography, dual action buttons (Start for free, Watch demo), trust guarantees, and an interactive product dashboard mockup featuring live status indicators and 3D perspective mouse-tilt.
+- **Trusted By Social Proof**: Typographic vector wordmarks for partner organizations (ARC, VANTA, NORTHSTAR, KINETIC, FRAME, ORBIT) and dual-track infinite marquees.
+- **Feature Matrix**: Six decoupled feature cards (Intelligent Workflows, AI Priorities, Team Intelligence, Smart Automations, Unified Projects, Live Insights) enhanced with radial cursor-following spotlight glows.
+- **Interactive Product Showcase**: Tabbed console switcher (Overview, Projects, Automations, Insights) dynamically updating the preview interface and metrics in real time.
+- **Workflow Progression (How It Works)**: Three-stage visual pipeline (Connect, Automate, Accelerate) joined by animated signal circuit lines and latency telemetry.
+- **Animated Statistics**: Dynamic counter interpolation triggered on viewport intersection, honoring user motion preferences.
+- **Department Solutions**: Dedicated views for Product, Marketing, Operations, and Engineering teams with live task queues and throughput benchmarks.
+- **Customer Endorsements**: Multi-card testimonials carousel featuring authentic photographic portraits of Indian professionals, accessible prev/next controls, and pagination indicators.
+- **Interactive Pricing Matrix**: Tiered plan cards (Starter, Growth, Scale) with dynamic monthly/annual billing cycle toggle, interactive team seat slider (1 to 100 seats), real-time INR (₹) price computation, and expandable 24+ feature comparison grid.
+- **Help Center Gateway**: Direct path to full knowledge base documentation.
+- **Conversion Banner & Global Footer**: Distinctive conversion card, multi-column navigation links, social presence, copyright, and real-time validated newsletter subscription form.
+
+### Dedicated Application Pages
+- **About Page (`/about`)**: Complete corporate narrative ("Born in Bengaluru"), vision, core values, leadership team profiles with authentic photographic headshots, and physical innovation hub cards (Bengaluru HQ, Mumbai BKC, Gurugram CyberCity).
+- **Help Center (`/help`)**: Searchable knowledge base featuring 18+ technical guides across 6 categories (Getting Started, Workspaces, Automations, Account & Security, Billing & GST, API & Developers) with real-time text query filtering and expandable accordion answers.
+- **Authentication Pages (`/login`, `/signup`)**: Client-side validation, password visibility toggles, plan query parameters (`?plan=growth`), and enterprise proof cards.
+- **Compliance & Legal Pages (`/privacy`, `/terms`, `/cookies`)**: Full enterprise-grade statutory disclosures, including an interactive Cookie Preferences manager with granular category toggles and localStorage persistence.
+
+### Interactive Components
+- **Interactive Product Demo Modal**: Four-step guided walkthrough with tabbed step selection, keyboard ESC dismissal, backdrop click detection, and direct sign-up conversion.
+- **Live Operations Simulator**: Real-time terminal environment demonstrating autonomous webhook ingestion, priority isolation, and latency metrics across three customizable presets.
+- **Dynamic Scroll Progress**: Top gradient indicator tracking live viewport scroll position with a illuminated leading edge.
+- **Floating Navigation Controller**: Dynamic back-to-top button appearing after 400px scroll threshold with smooth return animation.
+
+---
+
+## Design System
+
+The visual design system implements an intentional, contemporary palette that balances clarity, high contrast ratios, and developer ergonomics:
+
+### Color Palette
+
+| Token | Light Mode Hex | Dark Mode Hex | Usage |
+|---|---|---|---|
+| Background Primary | `#FFFFFF` | `#0B0C0E` | Base canvas background |
+| Surface Primary | `#F7F7F5` | `#14161A` | Secondary panels, cards, and tab containers |
+| Surface Subtle | `#FFFFFF` | `#181A22` | Raised nested widgets and input controls |
+| Text Primary | `#111111` | `#F3F4F6` | Headlines, titles, and high-emphasis copy |
+| Text Secondary | `#686868` | `#9CA3AF` | Supporting descriptions, metadata, and labels |
+| Border | `#E7E7E4` | `#252830` | Structural dividers and container outlines |
+| Accent Primary | `#635BFF` | `#635BFF` | Primary branding, interactive focus, and CTAs |
+| Accent Hover | `#5048D8` | `#746DFF` | Interactive hover and active feedback states |
+| Success / Active | `#22A06B` | `#45D193` | Sync confirmations, green beacons, and savings |
+| Warning | `#D97706` | `#F59E0B` | In-progress statuses and caution indicators |
+| Error / Critical | `#E5484D` | `#F87171` | Validation errors and blocked task alerts |
+
+### Typography Hierarchy
+- **Font Family**: Inter (Google Fonts) with geometric sans-serif fallbacks.
+- **Scale**: Display (`clamp(2.5rem, 5vw, 4rem)`), H1 (`2.25rem`), H2 (`1.75rem`), H3 (`1.25rem`), Body (`0.875rem` / `1rem`), Caption (`0.75rem` / `0.6875rem`).
+- **Tracking**: Tightened tracking on headlines (`-0.02em`) for editorial polish; relaxed leading on body text for sustained reading comfort.
+
+---
+
+## Architecture
+
+The project adheres to modular, component-driven design principles with separation of concerns:
+
+```text
+pulse/
+├── public/
+│   ├── favicon.svg             # Original vector favicon
+│   └── robots.txt              # Search engine crawling directives
+├── src/
+│   ├── assets/
+│   │   ├── avatars/            # Authentic photographic headshots of team & reviewers
+│   │   └── logo.svg            # Master vector brand assets
+│   ├── components/
+│   │   ├── ui/                 # Atomic design primitives
+│   │   │   ├── Badge.jsx       # Status pills and categorization tags
+│   │   │   ├── Button.jsx      # Polymorphic button/link with variant styles
+│   │   │   ├── Container.jsx   # Responsive layout constraints
+│   │   │   ├── Modal.jsx       # Accessible modal dialog with focus management
+│   │   │   └── SpotlightCard.jsx # Radial cursor-following glow container
+│   │   ├── BackToTop.jsx       # Floating scroll-to-top button
+│   │   ├── BrandLogo.jsx       # Vector brandmark and wordmark
+│   │   ├── DemoModal.jsx       # Guided interactive product walkthrough
+│   │   ├── FAQ.jsx             # Accessible question accordion
+│   │   ├── Features.jsx        # Grid of platform capability highlights
+│   │   ├── FinalCTA.jsx        # Bottom conversion banner
+│   │   ├── Footer.jsx          # Comprehensive footer and newsletter engine
+│   │   ├── HelpGateway.jsx     # Knowledge base transition banner
+│   │   ├── Hero.jsx            # Value proposition, CTAs, and 3D preview console
+│   │   ├── HowItWorks.jsx      # Step-by-step workflow timeline
+│   │   ├── InteractivePlayground.jsx # Live autonomous operations simulator
+│   │   ├── LogoCloud.jsx       # Dual-track infinite logo marquee
+│   │   ├── Navbar.jsx          # Sticky header with navigation drawer
+│   │   ├── Pricing.jsx         # Tier cards, seat slider, and feature matrix
+│   │   ├── ProductShowcase.jsx # Tabbed workspace preview console
+│   │   ├── ScrollProgress.jsx  # Viewport scroll depth tracking bar
+│   │   ├── Solutions.jsx       # Role-specific operations benchmarks
+│   │   ├── Stats.jsx           # Animated operational metrics
+│   │   └── Testimonials.jsx    # Review carousel with real photography
+│   ├── context/
+│   │   └── ThemeContext.jsx    # Light/Dark mode state with localStorage sync
+│   ├── data/                   # Decoupled static data layer
+│   │   ├── faq.js              # Frequently asked questions and structured answers
+│   │   ├── features.js         # Core platform feature definitions
+│   │   ├── help.js             # Knowledge base articles across 6 categories
+│   │   ├── pricing.js          # Pricing plans, seats calculation, and matrix
+│   │   ├── solutions.js        # Role-based use cases and metrics
+│   │   └── testimonials.js     # User reviews and photographic avatar mappings
+│   ├── pages/                  # Route-level views
+│   │   ├── About.jsx           # Corporate narrative, leadership, and hubs
+│   │   ├── Cookies.jsx         # Cookie policy and preferences manager
+│   │   ├── Help.jsx            # Searchable knowledge base portal
+│   │   ├── Login.jsx           # Workspace authentication view
+│   │   ├── Privacy.jsx         # Enterprise privacy disclosures
+│   │   ├── Signup.jsx          # Workspace registration view
+│   │   └── Terms.jsx           # Terms of service and SLA guarantees
+│   ├── App.jsx                 # Route composition and layout assembly
+│   ├── index.css               # Design tokens, keyframe animations, and utilities
+│   └── main.jsx                # Application mount entrypoint
+├── index.html                  # Metadata, OpenGraph cards, and fonts
+├── package.json                # Dependencies and configuration scripts
+├── tailwind.config.js          # Extended theme tokens and animation keyframes
+├── task.md                     # Phase-by-phase implementation audit
+└── README.md                   # Technical documentation
+```
+
+---
+
+## Technology Stack
+
+| Layer | Dependency | Version | Purpose |
+|---|---|---|---|
+| Runtime UI | React | 19.0.0 | Declarative component model and state synchronization |
+| Routing | React Router DOM | 7.3.0 | Client-side routing, route-level code execution, and query parameter handling |
+| Build Tool | Vite | 8.2.2 | Fast Hot Module Replacement and production Rollup compilation |
+| Styling | Tailwind CSS | 3.4.17 | Utility-first styling with design token control |
+| Icons | Lucide React | 1.16.0 | Vector iconography |
+| Fonts | Inter (Google Fonts) | Variable | Geometric sans-serif typography |
+
+---
+
+## Getting Started
 
 ### Prerequisites
 - Node.js 18.0 or higher
 - npm 9.0 or higher
 
-### Steps
+### Installation & Execution
 
 ```bash
-# 1. Clone repository
+# Clone the repository
 git clone https://github.com/aksh120/pulse.git
 cd pulse
 
-# 2. Install dependencies
+# Install dependencies
 npm install
 
-# 3. Start local development server
+# Launch development server
 npm run dev
-
-# 4. Open in browser
-# Navigate to http://localhost:5173
 ```
 
-### Production Build & Preview
+The application will be accessible at `http://localhost:5173`.
+
+### Production Build
 
 ```bash
-# Create optimized production build in /dist
+# Generate optimized production bundle in /dist
 npm run build
 
 # Preview production build locally
@@ -98,139 +207,32 @@ npm run preview
 
 ---
 
-## 🌐 Live Demo
+## Evaluation Notes
 
-- **Live URL**: `[Deploying to Vercel / Netlify]` *(Placeholder: Connect GitHub repository to Vercel/Netlify for one-click instant deployment)*
+### 1. Architectural Justification
+React 19 was selected for its battle-tested component abstraction, declarative lifecycle, and ecosystem maturity. Vite provides sub-second development builds through esbuild pre-bundling while generating an optimized production artifact with tree-shaking and asset compression.
 
----
+### 2. Mobile Responsive Navigation
+Mobile navigation is implemented using a reactive state controller (`mobileMenuOpen`). When active, it renders a semantic navigation panel with backdrop blur directly below the fixed header. Navigation actions trigger immediate drawer dismissal before smooth-scrolling to the target anchor, preventing layout collisions. A window resize observer automatically cleans up mobile state when expanding past the 768px breakpoint.
 
-## 🏗️ Architecture & Component Structure
+### 3. Accessible Accordion Architecture
+The FAQ and Help Center accordions maintain an active open ID array. Clicking an item triggers a toggle handler that either expands or collapses the section with CSS transitions. Each toggle button is semantically coupled to its content region via `aria-controls` and `aria-expanded` attributes, ensuring assistive technologies receive state changes accurately.
 
-```text
-pulse/
-├── public/
-│   ├── favicon.svg             # Original PULSE favicon
-├── src/
-│   ├── assets/
-│   │   └── logo.svg            # Source vector logo (symbol + wordmark)
-│   ├── components/
-│   │   ├── ui/                 # Reusable primitive design system
-│   │   │   ├── Badge.jsx       # Eyebrow & status pills
-│   │   │   ├── Button.jsx      # Semantic button with variants & sizes
-│   │   │   ├── Container.jsx   # Responsive max-width container wrapper
-│   │   │   └── Modal.jsx       # Accessible modal dialog with focus trap
-│   │   ├── BackToTop.jsx       # Floating scroll-to-top button
-│   │   ├── BrandLogo.jsx       # Single source of truth for PULSE logo mark
-│   │   ├── DemoModal.jsx       # Interactive product tour modal
-│   │   ├── FAQ.jsx             # Accessible multi-column accordion
-│   │   ├── Features.jsx        # 6-card feature grid
-│   │   ├── FinalCTA.jsx        # Bottom conversion banner
-│   │   ├── Footer.jsx          # Multi-column footer & newsletter form
-│   │   ├── Hero.jsx            # Confident hero & product UI mockup
-│   │   ├── HowItWorks.jsx      # 3-step visual timeline
-│   │   ├── LogoCloud.jsx       # Geometric customer logo wordmarks
-│   │   ├── Navbar.jsx          # Sticky responsive header with mobile drawer
-│   │   ├── Pricing.jsx         # 3-tier pricing cards with billing toggle
-│   │   ├── ProductShowcase.jsx # Interactive tabbed product demonstration
-│   │   ├── Solutions.jsx       # Department use cases & live workflow preview
-│   │   ├── Stats.jsx           # Animated IntersectionObserver counters
-│   │   └── Testimonials.jsx    # Review carousel with controls & dots
-│   ├── context/
-│   │   └── ThemeContext.jsx    # Light/Dark mode state & localStorage sync
-│   ├── data/                   # Decoupled data layer
-│   │   ├── faq.js              # FAQ questions and detailed answers
-│   │   ├── features.js         # Feature list, icons, and categories
-│   │   ├── pricing.js          # Tier descriptions, features, and rates
-│   │   ├── solutions.js        # Role-based use case specifications
-│   │   └── testimonials.js     # User quotes, roles, companies, avatars
-│   ├── App.jsx                 # Top-level composition
-│   ├── index.css               # Tailwind directives & design system tokens
-│   └── main.jsx                # React root mount
-├── index.html                  # SEO metadata, OpenGraph tags, and Inter font
-├── package.json                # Dependencies and build scripts
-├── postcss.config.js           # PostCSS configuration
-├── tailwind.config.js          # Tailwind tokens, palettes, and shadows
-├── task.md                     # Development tracking checklist
-└── README.md                   # Comprehensive project documentation
-```
+### 4. Decoupled Content Layer
+All dynamic marketing copy, features, solutions, help center documents, pricing models, and testimonials reside in standalone JavaScript modules under `src/data/`. This separation ensures content maintainability without risk of disrupting JSX component hierarchy or layout structure.
+
+### 5. Theme Persistence & Color Architecture
+Theme management is implemented via a lightweight React Context (`ThemeContext`). Upon initialization, it reads user preference from `localStorage` with a fallback to `window.matchMedia('(prefers-color-scheme: dark)')`. Theme updates append or remove the `.dark` selector on `document.documentElement`, dynamically activating Tailwind CSS dark classes across all DOM nodes and synchronizing with storage.
+
+### 6. Production Backend Transition Blueprint
+Transitioning this interface to a full-stack production application involves:
+- **Authentication**: Implementing session management and enterprise SSO (SAML/Okta) via Supabase Auth or Clerk.
+- **Data Ingestion Engine**: Connecting an event bus (Kafka / RabbitMQ) to ingest real-time webhook payloads from GitHub, Linear, Slack, and Jira into PostgreSQL.
+- **Priority Intelligence Service**: Powering the AI priorities engine with Python/Go microservices evaluating contextual dependency graphs.
+- **Subscription Billing**: Integrating Stripe Billing webhooks to synchronize seat upgrades, annual billing discounts, and automated GST invoice issuance.
 
 ---
 
-## 🎨 Visual Design System
+## License
 
-The visual design system adheres strictly to a **white-first, modern SaaS startup aesthetic** as opposed to generic AI-generated templates:
-
-- **Primary Background**: `#FFFFFF` (Light) / `#0B0C0E` (Dark)
-- **Subtle Surface**: `#F7F7F5` (Light) / `#14161A` (Dark)
-- **Primary Text**: `#111111` (Light) / `#F3F4F6` (Dark)
-- **Secondary Text**: `#686868` (Light) / `#9CA3AF` (Dark)
-- **Border**: `#E7E7E4` (Light) / `#252830` (Dark)
-- **Accent**: `#635BFF` (PULSE Indigo) / Hover `#5048D8`
-- **Success / Status**: `#22A06B` (Green) / Warning `#D97706` (Amber) / Danger `#E5484D` (Coral)
-
----
-
-## ♿ Accessibility Considerations
-
-1. **Semantic HTML5**: Full use of `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, `<button>`, `<form>`, and `<a>`.
-2. **Keyboard Navigation**:
-   - `Tab` traverses all interactive links and buttons in logical visual sequence.
-   - `Space` / `Enter` toggles accordion items, tabs, and buttons.
-   - `Escape` dismisses the Demo Modal dialog.
-   - Left/Right arrow keys control the Testimonial carousel.
-3. **ARIA Attributes**:
-   - `aria-expanded` dynamically conveys state on mobile menu and FAQ accordions.
-   - `aria-label` provides clear accessible names for icon-only buttons (theme toggle, carousel arrows, close buttons).
-   - `role="dialog"` and `aria-modal="true"` properly identify the demo modal.
-4. **Reduced Motion Support**:
-   - Media query `@media (prefers-reduced-motion: reduce)` automatically suppresses smooth scrolling and counter animations for sensitive users.
-5. **Visible Focus Rings**:
-   - High-contrast `outline: 2px solid #635BFF` applied to all `:focus-visible` states.
-
----
-
-## ⚡ Performance Considerations
-
-- **Lean Bundle Size**: Minified JavaScript bundle is only **~85 kB gzipped**, loading in under 300ms on 4G networks.
-- **Pure SVG Assets**: The custom PULSE logo and partner logos use inline vectors with zero raster overhead.
-- **Dynamic Viewport Animation**: Statistics counter runs via `IntersectionObserver` only when visible, canceling animation frames immediately after finishing.
-- **Zero Heavy External Animation Libraries**: Built without bloated packages (Framer Motion, GSAP), keeping the app lightweight and explainable.
-
----
-
-## 💡 Evaluation Questions & Explanations
-
-### 1. Why React + Vite was selected?
-React provides component-driven reusability, declarative state synchronization, and strong typing ecosystem. Vite was selected because its esbuild-powered dev server offers instant sub-100ms startup times, while Rollup produces an optimized, tree-shaken static bundle for deployment on any edge CDN.
-
-### 2. How the mobile navigation works?
-The mobile navigation utilizes React state (`mobileMenuOpen`) to toggle an animated drawer below the sticky header. When the user taps a navigation link, an event handler closes the drawer immediately before triggering smooth scroll to the selected section anchor, preventing layout overlap or trapped viewport scrolling. A window resize listener automatically closes the mobile drawer when viewport width expands past the `md` breakpoint (768px).
-
-### 3. How the FAQ accordion works?
-The accordion maintains an array of active open IDs (`openIds`). Clicking a question checks if its ID is present; if so, it filters it out (collapses), otherwise appends it (expands), allowing single or multi-item inspection. The answer container is linked to the toggle button via `aria-controls` and `aria-expanded` for screen readers, with a CSS rotate transition on the chevron icon.
-
-### 4. How data is rendered?
-All repeated marketing content (features, testimonials, pricing plans, FAQs, and use cases) is separated into dedicated files in `src/data/`. Components import these structured arrays and render them via array `.map()` iterations with unique keys. This makes content updates straightforward without touching JSX layout structures.
-
-### 5. How theme switching works?
-A custom `ThemeProvider` context monitors current theme state, initialized from `localStorage` or `window.matchMedia('(prefers-color-scheme: dark)')`. It adds or removes the `.dark` class on `document.documentElement`, activating Tailwind's `dark:` modifier classes throughout the entire DOM tree and synchronizing changes to `localStorage`.
-
-### 6. How you would convert the static site into a production application?
-1. **Authentication**: Integrate Clerk, Auth0, or Supabase Auth to handle user signup, SSO, and session cookies.
-2. **Backend API**: Connect to a FastAPI, Node.js, or Go backend exposing REST/GraphQL endpoints for workspace projects, automation recipes, and webhooks.
-3. **Database**: Store user data and project graphs in PostgreSQL (Supabase/Neon) with Redis for caching event streams.
-4. **Billing**: Wire the Pricing CTAs to Stripe Checkout sessions and customer portal webhooks.
-5. **Analytics & Error Monitoring**: Install PostHog or Datadog for product analytics and Sentry for error tracking.
-
----
-
-## 🤖 AI Tools Usage
-
-- **AI Assistance**: Antigravity AI pair programming was used for requirement audits, architectural scaffolding, generating design tokens matching the design reference, and automating browser verification test runs.
-- **Human Review & Understandability**: Every component was intentionally structured with readable, explainable React conventions and semantic CSS utilities, avoiding convoluted abstractions.
-
----
-
-## 📄 License
-
-This project was developed as an assignment submission for the Front-End Development Intern role. All rights reserved © 2024 PULSE.
+This project is licensed under the MIT License. Developed as a front-end engineering assignment submission. Copyright &copy; 2024 PULSE Inc.

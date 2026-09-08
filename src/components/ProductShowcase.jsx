@@ -237,7 +237,11 @@ export default function ProductShowcase() {
                       <div className="space-y-2">
                         <div className="p-3 rounded-xl bg-pulse-surface dark:bg-[#181A22] border border-pulse-border/60 dark:border-[#252830] space-y-1">
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-semibold text-pulse-primary dark:text-white">PR Merged → Auto-close Linear Ticket</span>
+                            <span className="text-xs font-semibold text-pulse-primary dark:text-white inline-flex items-center gap-1.5">
+                              <span>PR Merged</span>
+                              <ArrowRight className="w-3 h-3 text-pulse-secondary flex-shrink-0" />
+                              <span>Auto-close Linear Ticket</span>
+                            </span>
                             <span className="text-[10px] text-emerald-500 font-medium">Triggered 42x</span>
                           </div>
                           <p className="text-[10px] text-pulse-secondary">Syncs development progress automatically across repos</p>
@@ -245,7 +249,11 @@ export default function ProductShowcase() {
 
                         <div className="p-3 rounded-xl bg-pulse-surface dark:bg-[#181A22] border border-pulse-border/60 dark:border-[#252830] space-y-1">
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-semibold text-pulse-primary dark:text-white">Task Blocked &gt; 48h → Alert Team Lead</span>
+                            <span className="text-xs font-semibold text-pulse-primary dark:text-white inline-flex items-center gap-1.5">
+                              <span>Task Blocked &gt; 48h</span>
+                              <ArrowRight className="w-3 h-3 text-pulse-secondary flex-shrink-0" />
+                              <span>Alert Team Lead</span>
+                            </span>
                             <span className="text-[10px] text-emerald-500 font-medium">Triggered 5x</span>
                           </div>
                           <p className="text-[10px] text-pulse-secondary">Surfaces bottlenecks before milestones get delayed</p>
@@ -253,7 +261,11 @@ export default function ProductShowcase() {
 
                         <div className="p-3 rounded-xl bg-pulse-surface dark:bg-[#181A22] border border-pulse-border/60 dark:border-[#252830] space-y-1">
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-semibold text-pulse-primary dark:text-white">Weekly Summary → Post to #team-sync</span>
+                            <span className="text-xs font-semibold text-pulse-primary dark:text-white inline-flex items-center gap-1.5">
+                              <span>Weekly Summary</span>
+                              <ArrowRight className="w-3 h-3 text-pulse-secondary flex-shrink-0" />
+                              <span>Post to #team-sync</span>
+                            </span>
                             <span className="text-[10px] text-emerald-500 font-medium">Every Friday 5 PM</span>
                           </div>
                           <p className="text-[10px] text-pulse-secondary">Compiles cross-functional achievements into bullet points</p>

@@ -44,7 +44,7 @@
 - [x] Build Hero section with eyebrow badge ("YOUR TEAM, IN SYNC")
 - [x] Add confident typography ("Turn busywork into momentum.")
 - [x] Add action buttons ("Start for free" and "Watch demo")
-- [x] Add trust proof items ("✓ Free forever", "✓ No credit card required", "✓ Set up in minutes")
+- [x] Add trust proof items ("Free forever", "No credit card required", "Set up in minutes")
 - [x] Build rich, interactive Product Dashboard Preview card:
   - Header with search, notifications, avatar
   - Sidebar with active tab states

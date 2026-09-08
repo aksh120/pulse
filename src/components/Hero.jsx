@@ -314,7 +314,10 @@ export default function Hero() {
                       <div className="p-3 rounded-xl bg-pulse-surface dark:bg-[#181A22] border border-pulse-border/70 dark:border-[#252830]">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-[11px] font-bold text-pulse-primary dark:text-white">Team activity</span>
-                          <span className="text-[9px] font-semibold text-[#22A06B] bg-[#EBF9F1] dark:bg-[#142B1F] px-1.5 py-0.5 rounded-full">● ALL IN SYNC</span>
+                          <span className="text-[9px] font-semibold text-[#22A06B] bg-[#EBF9F1] dark:bg-[#142B1F] px-2 py-0.5 rounded-full inline-flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#22A06B] animate-pulse" />
+                            <span>ALL IN SYNC</span>
+                          </span>
                         </div>
                         <div className="flex items-center gap-1">
                           <img src={priyaImg} alt="Priya Sharma" title="Priya Sharma" className="w-5 h-5 rounded-full object-cover border border-white/60 dark:border-[#252830]" />
