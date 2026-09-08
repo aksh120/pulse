@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, ArrowRight } from 'lucide-react';
 import Container from './ui/Container';
 import Badge from './ui/Badge';
 import Button from './ui/Button';
@@ -70,12 +71,14 @@ export default function FAQ() {
               Everything you need to know about PULSE, our intelligent workspace, integrations, and pricing.
             </p>
             <Button
-              href="#pricing"
+              as={Link}
+              to="/help"
               variant="outline"
               size="sm"
+              iconRight={<ArrowRight className="w-3.5 h-3.5" />}
               className="text-xs font-semibold"
             >
-              View all questions
+              Explore all 18+ guides
             </Button>
           </div>
 
